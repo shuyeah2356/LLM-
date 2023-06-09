@@ -8,7 +8,7 @@ def openai_answer(prompt):
     socks.set_default_proxy(socks.SOCKS5, '127.0.0.1', 7890)
     socket.socket = socks.socksocket
 
-    openai.api_key = ""
+    openai.api_key = "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"
 
     prompt = prompt
 
@@ -51,7 +51,7 @@ def gradio():
     output_text = gr.outputs.Textbox(label="提取科研指标")
 
     interface = gr.Interface(fn=process_prompt, inputs=[input_text, input_tags, edit_tags], outputs=output_text)
-    interface.launch()
+    interface.launch(share=True)
 
 
 if __name__ == '__main__':
