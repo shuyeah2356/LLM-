@@ -8,7 +8,7 @@ def openai_answer(prompt):
     socks.set_default_proxy(socks.SOCKS5, '127.0.0.1', 7890)
     socket.socket = socks.socksocket
 
-    openai.api_key = "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"
+    openai.api_key = ""
 
     prompt = prompt
 
